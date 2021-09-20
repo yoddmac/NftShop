@@ -1,4 +1,4 @@
-# sftshop
+# nftshop
 
 ## Project setup
 ```

@@ -1,13 +1,15 @@
 <template>
-  <hello-world />
+  <div>
+    <h1>La home page :</h1>
+    <LoginPage />
+  </div>
 </template>
 
 <script>
-
+import LoginPage from "../components/LoginPage";
 export default {
-  name: 'Home',
+  name: "Home",
 
-  components: {
-  }
-}
+  components: { LoginPage },
+};
 </script>
