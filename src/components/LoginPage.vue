@@ -4,7 +4,7 @@
       <v-col cols="12" sm="8" md="4" lg="4">
         <v-card elevation="1">
           <v-img
-            src="@/assets/logo.png"
+            src="@/assets/NFT_Icon.png"
             alt="NftShop"
             contain
             height="200"
@@ -24,7 +24,7 @@
                 name="password"
                 prepend-inner-icon="mdi-lock"
                 type="password"
-                suffix="| Forgot?"
+                suffix=" Forgot?"
                 class="rounded-0"
                 outlined
               ></v-text-field>
@@ -41,7 +41,6 @@
               <v-card-actions class="text--secondary">
                 <v-checkbox color="#000000" label="Remember me"></v-checkbox>
                 <v-spacer></v-spacer>
-                <!-- <router-link :to="{ name: 'SignUp' }">Sign Up</router-link> -->
                 No account?
                 <a href="#" class="pl-2" style="color: #000000">Sign Up</a>
               </v-card-actions>

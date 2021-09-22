@@ -1,13 +1,16 @@
 <template>
-  <div>
-    <h1>La shop :</h1>
-  </div>
+<div>
+  <ShopPage />
+</div>
 </template>
 
-<script>
-export default {
-  name: "Shop.vue",
-};
-</script>
 
-<style scoped></style>
+<script>
+import ShopPage from "../components/ShopPage.vue";
+export default {
+  name: "Shop",
+  components: { ShopPage },
+};
+
+
+</script>
