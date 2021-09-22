@@ -13,6 +13,19 @@
 
         <v-img
           alt="Nft Name"
+
+
+
+
+
+
+
+
+
+
+
+
+          
           class="shrink mt-1 hidden-sm-and-down"
           contain
           min-width="100"
