@@ -13,19 +13,6 @@
 
         <v-img
           alt="Nft Name"
-
-
-
-
-
-
-
-
-
-
-
-
-          
           class="shrink mt-1 hidden-sm-and-down"
           contain
           min-width="100"
@@ -51,9 +38,9 @@ export default {
     //
   }),
   methods: {
-       goToHome(){
-   this.$router.push('/'); 
-      }
-  }
+    goToHome() {
+      this.$router.push("/");
+    },
+  },
 };
 </script>
