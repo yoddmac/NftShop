@@ -8,6 +8,14 @@
 import ShopPage from "../components/ShopPage.vue";
 export default {
   name: "Shop",
-  components: { ShopPage },
+  page: 1,
+  components: {
+    ShopPage,
+  },
+  methods: {
+    handlePageChange(value) {
+      this.currentPage = value;
+    },
+  },
 };
 </script>

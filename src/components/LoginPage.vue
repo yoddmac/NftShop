@@ -12,6 +12,7 @@
           <v-card-text>
             <v-form>
               <v-text-field
+                  v-model="email"
                 label="Enter your email"
                 name="email"
                 prepend-inner-icon="mdi-email"
@@ -20,6 +21,7 @@
                 outlined
               ></v-text-field>
               <v-text-field
+                  v-model="password"
                 label="Enter your password"
                 name="password"
                 prepend-inner-icon="mdi-lock"
@@ -28,8 +30,8 @@
                 class="rounded-0"
                 outlined
               ></v-text-field>
-
               <v-btn
+                  v-if="checkFrom()"
                 to="/shop"
                 class="rounded-0"
                 color="#000000"
@@ -42,7 +44,12 @@
                 <v-checkbox color="#000000" label="Remember me"></v-checkbox>
                 <v-spacer></v-spacer>
                 No account?
-                <a href="#" class="pl-2" style="color: #000000">Sign Up</a>
+                <a
+                  href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                  class="pl-2"
+                  style="color: #000000"
+                  >Sign Up</a
+                >
               </v-card-actions>
             </v-form>
           </v-card-text>
@@ -54,8 +61,33 @@
 
 <script>
 export default {
+
   name: "LoginPage",
 
-  data: () => ({}),
+  data: () => ({
+    errors: [],
+    email: null,
+    password: null,
+    reg: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/,
+  }),
+  methods: {
+    isEmailValid() {
+      return (this.email === "")? "" : (this.reg.test(this.email));
+    },
+    checkFrom() {
+      if (this.email && this.password && this.isEmailValid()) {
+        return true
+      }
+    this.errors = [];
+
+    if (!this.email) {
+      this.errors.push('Email required.');
+}
+    if (!this.password) {
+      this.errors.push('Password required.');
+    }
+    return false;
+}
+  }
 };
 </script>
